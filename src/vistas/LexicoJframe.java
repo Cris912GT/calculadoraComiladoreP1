@@ -90,10 +90,10 @@ public class LexicoJframe extends javax.swing.JFrame {
         jLabel6.setText("Rony Andree Baran Mata 4490-17-3323");
 
         jLabel7.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
-        jLabel7.setText("Sergio Benjamin Grajeda Lima 4490-17-");
+        jLabel7.setText("Sergio Benjamin Grajeda Lima 4490-17-12467");
 
         jLabel8.setFont(new java.awt.Font("Consolas", 1, 12)); // NOI18N
-        jLabel8.setText("Cristian Daniel Castillo Camposeco 4490-17-");
+        jLabel8.setText("Cristian Daniel Castillo Camposeco 4490-17-3570");
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vistas/logoumg2.jpg"))); // NOI18N
 

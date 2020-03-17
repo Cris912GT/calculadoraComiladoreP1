@@ -194,7 +194,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Consolas" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Sergio Benjamin Grajeda Lima 4490-17-"/>
+        <Property name="text" type="java.lang.String" value="Sergio Benjamin Grajeda Lima 4490-17-12467"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
@@ -202,7 +202,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Consolas" size="12" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Cristian Daniel Castillo Camposeco 4490-17-"/>
+        <Property name="text" type="java.lang.String" value="Cristian Daniel Castillo Camposeco 4490-17-3570"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
