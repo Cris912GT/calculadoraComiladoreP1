@@ -524,7 +524,7 @@ public class Main {
                     if (tokenA.equals(tokenB)){
                         esp = " + - * / ^ # (  { [ ) } ] ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
-                        sintactic = si*(()()ntactic + Temp;
+                        sintactic = sintactic + Temp;
                         return esp;
                     }
                 }
