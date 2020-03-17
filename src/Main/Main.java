@@ -531,7 +531,7 @@ public class Main {
                 
                 // REGLAS APLICADAS A OPERADORES
                 if (tokenB.equals("+")){
-                    if (tokenA == tokenB){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -539,7 +539,7 @@ public class Main {
                     }
                 }
                 if (tokenB.equals("-")){
-                    if (tokenA == tokenB){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -548,7 +548,7 @@ public class Main {
                     }
                 }
                 if (tokenB.equals("*")){
-                    if (tokenA == tokenB){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -557,7 +557,7 @@ public class Main {
                     }
                 }
                 if (tokenB.equals("/")){
-                    if (tokenA == tokenB){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
