@@ -34,10 +34,14 @@ public class Main {
     static Colas ColaTokens = new Colas();
     static String cadena1;
     static String texto;
-    static String error = "                     --------------Error Léxico--------------";
+    static String error = "\n                           --------------Error Léxico--------------";
+    static String errors = "\n \n                       --------------Error Sintactico--------------";
+    static String sintactic= "";
     static int NoDeToken=1;
     static String nextToken="";
     static String nextVal = "";
+    static String Temp = "";
+    static String concerr = "";
     
     public static void main(String [] Args) throws IOException{
         /*Creacion del archivo de texto a utilizar*/
@@ -470,33 +474,48 @@ public class Main {
         if (nopos == 1){
             if (esNumero(tokenA)) {
                 esp = "+-*/^({[";
-                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                sintactic = sintactic + Temp;
+                //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("(")) {
                 esp = "-({[@";
-                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                sintactic = sintactic + Temp;
+                //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("{")) {
                 esp = "-({[@";
-                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                sintactic = sintactic + Temp;
+                //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("[")) {
                 esp = "-({[@";
-                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                sintactic = sintactic + Temp;
+                //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("-")) {
                 esp = "@({[";
-                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                sintactic = sintactic + Temp;
+                //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             else {
-                System.out.println(ANSI_RED + "ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura." + ANSI_RESET);
-            }
+                String temp = ("ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura.");
+                errors = errors + temp;
+                //System.out.println(ANSI_RED + "ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura." + ANSI_RESET);
+            }  
+            /*LexicoJframe.SintacticoTP.setText(sintactic);
+            LexicoJframe.ErrorTP.setText(errors);*/
         }
+        
         else {
             for (int i = 0; i < (nextVal.length()); i++){
                 char letra = nextVal.charAt(i);
@@ -574,7 +593,10 @@ public class Main {
                 }
             }
         }
+        LexicoJframe.SintacticoTP.setText(sintactic);
+        concerr = error + errors;
+        LexicoJframe.ErrorTP.setText(concerr);
         return "error";
     }
-
+    
 }
