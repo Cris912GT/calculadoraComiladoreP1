@@ -64,7 +64,7 @@ public class Colas
             contador++;
             c=c.getNext();
         }
-        System.out.println("Numero de datos en la cola: "+contador);
+        //System.out.println("Numero de datos en la cola: "+contador);
         return contador;
     }
 

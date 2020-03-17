@@ -442,10 +442,11 @@ public class Main {
     
     public static void analisisSintactico(){
         String token="";
+        System.out.println(ColaTokens.contar());
         for ( int k = 0; k <= (ColaTokens.contar()); k++){
         token = ColaTokens.extraer();
-        System.out.println("el token actual es> " + token);
-            System.out.println(k);
+        System.out.println("el token actual es: " + token);
+            System.out.println("ciclo actual " + k +"\n");
         token = "";
         }
     }
