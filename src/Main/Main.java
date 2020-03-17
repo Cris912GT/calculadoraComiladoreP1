@@ -459,9 +459,9 @@ public class Main {
         
         String[] listaDeTokens;
         
-        if (no = 0){}
+        if (no == 0){}
         
-        if (no = 1){
+        if (no == 1){
             if (esNumero(tokenA)) {
                 
             }
