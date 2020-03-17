@@ -34,7 +34,7 @@ public class Main {
     static Colas ColaTokens = new Colas();
     static String cadena1;
     static String texto;
-    static String error = "--------------Error Léxico--------------";
+    static String error = "                     --------------Error Léxico--------------";
     static int NoDeToken=1;
     
     
