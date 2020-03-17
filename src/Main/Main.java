@@ -34,6 +34,7 @@ public class Main {
     static Colas ColaTokens = new Colas();
     static String cadena1;
     static String texto;
+    static int NoDeToken=1;
     
     
     public static void main(String [] Args) throws IOException{
@@ -79,7 +80,7 @@ public class Main {
     /*Metodo utilizado para realizar la validacion de tokens y eliminar espacios en la cadena*/
     private static void SeparacionTokens(String cadena1){
         // Declaracion de la cantidad de tokens analizados
-        int NoDeToken=1;
+        
         
         //Variable que almacena el valor de los caracteres analizados
         String cadena = cadena1;
@@ -415,4 +416,14 @@ public class Main {
         */  
         
     }
+    
+    public static void analisisSintactico(){
+        String token="";
+        for ( int k ; i <= ){
+        token = ColaTokens.extraer();
+        System.out.println("el ");
+        }
+    }
+    
+    public static sint
 }
