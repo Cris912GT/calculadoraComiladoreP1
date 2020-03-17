@@ -371,7 +371,8 @@ public class Main {
     //VERIFICAMOS QUE EL PRIMER CARACTER SEA VALIDO
     public static boolean validarPrimerCaracter(){
         if(primercaracter().equals("er")){
-            System.out.println(ANSI_RED + "ERROR EL PRIMER CARACTER NO ES VALIDO" + ANSI_RESET);
+            String Temp = ("ERROR EL PRIMER CARACTER NO ES VALIDO");
+            error= error + Temp;
             return true;
         }
         if(primercaracter().equals("")){
@@ -402,7 +403,9 @@ public class Main {
             return "sM";
         }
         else {
-            LexicoJframe.ErrorTP.setText("-------------Error Léxico-------------" + "ERROR: El primer caracter de la operacion no es valido....");
+            String Temp = ("ERROR: El primer caracter de la operacion no es valido....");
+            error = error + Temp;
+            //LexicoJframe.ErrorTP.setText( "ERROR: El primer caracter de la operacion no es valido....");
             //System.out.println(ANSI_RED + " ERROR: El primer caracter de la operacion no es valido....");
             
             return "er";
