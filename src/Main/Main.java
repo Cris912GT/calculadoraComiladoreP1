@@ -474,41 +474,41 @@ public class Main {
         if (nopos == 1){
             if (esNumero(tokenA)) {
                 esp = "+-*/^({[";
-                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 sintactic = sintactic + Temp;
                 //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("(")) {
                 esp = "-({[@";
-                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 sintactic = sintactic + Temp;
                 //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("{")) {
                 esp = "-({[@";
-                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 sintactic = sintactic + Temp;
                 //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("[")) {
                 esp = "-({[@";
-                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 sintactic = sintactic + Temp;
                 //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("-")) {
                 esp = "@({[";
-                Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 sintactic = sintactic + Temp;
                 //System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             else {
-                String temp = ("ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura.");
+                String temp = ("\n ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura.");
                 errors = errors + temp;
                 //System.out.println(ANSI_RED + "ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura." + ANSI_RESET);
             }  
@@ -524,71 +524,121 @@ public class Main {
                 //REGLAS APLICADAS A NUMEROS
                 if (tokenB == "@"){
                     if (tokenA == tokenB){
-                        return "+-*/^#({[)}]";
+                        esp = "+-*/^#({[)}]";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
                     }
                 }
                 
                 // REGLAS APLICADAS A OPERADORES
                 if (tokenB == "+"){
                     if (tokenA == tokenB){
-                        return "@({[";
+                        esp = "@({[";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
                     }
                 }
                 if (tokenB == "-"){
                     if (tokenA == tokenB){
-                        return "@({[";
+                        esp = "@({[";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[";
                     }
                 }
                 if (tokenB == "*"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "/"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "^"){
                     if (tokenA == tokenB){
-                        return "@({[";
+                        esp = "@({[";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[";
                     }
                 }
                 if (tokenB == "#"){
                     if (tokenA == tokenB){
-                        return "@({[";
+                        esp = "@({[";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[";
                     }
                 }
                 
                 // REGLAS QUE SE APLICAN A LOS SIMBOLOS DE AGRUPACION
                 if (tokenB == "("){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "{"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "["){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == ")"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "}"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
                 if (tokenB == "]"){
                     if (tokenA == tokenB){
-                        return "@({[-";
+                        esp = "@({[-";
+                        Temp = ("\n Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
                     }
                 }
             }
