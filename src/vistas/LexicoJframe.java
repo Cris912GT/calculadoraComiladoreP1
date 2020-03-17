@@ -99,6 +99,8 @@ public class LexicoJframe extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(LexicoTP);
 
+        ErrorTP.setFont(new java.awt.Font("Consolas", 3, 14)); // NOI18N
+        ErrorTP.setForeground(new java.awt.Color(255, 0, 0));
         jScrollPane2.setViewportView(ErrorTP);
 
         jScrollPane3.setViewportView(SintacticoTP);
