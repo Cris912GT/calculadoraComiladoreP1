@@ -448,18 +448,26 @@ public class Main {
         System.out.println("limite: " + lim);
         for ( int k = 0; k <= lim; k++){
         token = ColaTokens.extraer();
-        System.out.println("el token actual es: " + token);
-            System.out.println("ciclo actual " + k +"\n");
+            validar(token, NoDeToken);
         token = "";
         }
     }
     
-    public static void validar(String token){
+    public static void validar(String token, int notoken){
         String tokenA = token;
+        int no = notoken;
+        
         String[] listaDeTokens;
-        if (esNumero(tokenA)) {
-            
+        
+        if (no = 0){}
+        
+        if (no = 1){
+            if (esNumero(tokenA)) {
+                
+            }
         }
+        else {}
+        
     }
 
 }
