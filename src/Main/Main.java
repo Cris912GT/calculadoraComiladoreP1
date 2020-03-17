@@ -224,7 +224,8 @@ public class Main {
             
             //              ELIMINACION DE ESPACIOS EN BLANCO
             if (PreToken.equals(" ")) {
-                
+                String blanco = ("\n Se ha eliminado un espacio en blanco " + PreToken);
+                texto = texto +blanco;
                 //System.out.println("Se ha eliminado un espacio en blanco" + PreToken);
                 PreToken = "";
             }
