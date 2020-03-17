@@ -411,11 +411,9 @@ public class Main {
     
     public static void analisisSintactico(){
         String token="";
-        for ( int k ; i <= ){
+        for ( int k = 0; k <= NoDeToken; k++){
         token = ColaTokens.extraer();
         System.out.println("el ");
         }
     }
-    
-    public static sint
 }
