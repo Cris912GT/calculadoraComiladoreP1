@@ -26,9 +26,9 @@ public class LexicoJframe extends javax.swing.JFrame {
            // Centering on screen...
                          // Setting dimensions...
         setTitle("CALCULADORA COMPILADORES"); 
-        
-     		
-
+        LexicoTP.setEditable(false);
+        SintacticoTP.setEditable(false);
+         ErrorTP.setEditable(false);
       setLocationRelativeTo(null);		
      
     }
