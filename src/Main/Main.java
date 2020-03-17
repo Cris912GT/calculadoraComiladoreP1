@@ -74,6 +74,7 @@ public class Main {
         cadena1 = Cadena;
         SeparacionTokens(cadena1);
         MostrarACP1();
+        analisisSintactico();
         }
     
     
