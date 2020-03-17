@@ -470,22 +470,28 @@ public class Main {
         if (nopos == 1){
             if (esNumero(tokenA)) {
                 esp = "+-*/^({[";
-                System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
+                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("(")) {
                 esp = "-({[@";
-                System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
+                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
             if (tokenA.equals("{")) {
-                return "-({[@";
+                esp = "-({[@";
+                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                return esp;
             }
             if (tokenA.equals("[")) {
-                return "-({[@";
+                esp = "-({[@";
+                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                return esp;
             }
             if (tokenA.equals("-")) {
-                return "@({[";
+                esp = "@({[";
+                System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
+                return esp;
             }
         }
         else {
