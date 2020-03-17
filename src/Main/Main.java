@@ -33,6 +33,8 @@ public class Main {
     static String num =  "";
     static Colas ColaTokens = new Colas();
     static String cadena1;
+    static String texto;
+    
     
     public static void main(String [] Args) throws IOException{
         /*Creacion del archivo de texto a utilizar*/
@@ -109,23 +111,21 @@ public class Main {
         for (int i = 0; i < (cadena.length()); i++){
             char letra = cadena.charAt(i);
             String letraR = Character.toString(letra);
-            PreToken = PreToken + letra;
-            
-            
+            PreToken = PreToken + letra; 
             //          INSERTAR OPERADORES MATEMATICOS A LA COLA
             if (PreToken.equals(tokenSuma)) {
                 insertNumCola();
-                Suma="El token reconocido es:  + ";
-                LexicoJframe.AnalisisTF.setText("El token reconocido es:" + PreToken);
+                Suma="\n El token reconocido es:  +  \n";
+                texto = texto + Suma;
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
                 insertarEnColaTokens(PreToken);
                 PreToken = "";
             }
             if (PreToken.equals(tokenResta)) {
-                Suma="El token reconocido es:  - ";
+                Resta="\n El token reconocido es:  - \n";
+                texto = texto + Suma;
                 insertNumCola();
-                LexicoJframe.AnalisisTF.setText("El token reconocido es:" + PreToken);
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
                 insertarEnColaTokens(PreToken);
@@ -133,7 +133,8 @@ public class Main {
             }
             if (PreToken.equals(tokenMultiplicacion)) {
                 insertNumCola();
-                Suma="El token reconocido es:  * ";
+                Multiplicacion=" \n El token reconocido es:  * \n";
+                texto = texto + Multiplicacion;
                 LexicoJframe.AnalisisTF.setText("El token reconocido es:" + PreToken);
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
@@ -142,7 +143,7 @@ public class Main {
             }
             if (PreToken.equals(tokenDivision)) {
                 insertNumCola();
-                Suma="El token reconocido es:  / ";
+                Suma="\n El token reconocido es:  /  \n";
                 LexicoJframe.AnalisisTF.setText("El token reconocido es:" + PreToken);
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
@@ -259,10 +260,11 @@ public class Main {
             
             NoDeToken = NoDeToken +1;
             System.out.println("\n");
+            
         }
+        LexicoJframe.AnalisisTF.setText(texto);
         NoDeToken = 1;
         insertNumCola();
-        LexicoJframe.AnalisisTF.setText(Suma + "\n" + Resta + "\n" + Multiplicacion + "\n" + Division);
     }
     
     private static void insertNumCola(){
