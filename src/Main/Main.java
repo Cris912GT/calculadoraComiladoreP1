@@ -473,18 +473,18 @@ public class Main {
                 System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
                 return esp;
             }
-            if (tokenA == "(") {
+            if (tokenA.equals("(")) {
                 esp = "-({[@";
                 System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
                 return esp;
             }
-            if (tokenA == "{") {
+            if (tokenA.equals("{")) {
                 return "-({[@";
             }
-            if (tokenA == "[") {
+            if (tokenA.equals("[")) {
                 return "-({[@";
             }
-            if (tokenA == "-") {
+            if (tokenA.equals("-")) {
                 return "@({[";
             }
         }
