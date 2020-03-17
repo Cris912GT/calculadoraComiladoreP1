@@ -45,7 +45,7 @@ public class LexicoJframe extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        ExpresionTF = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         AnalisisTF = new javax.swing.JTextField();
@@ -127,7 +127,7 @@ public class LexicoJframe extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(ExpresionTF, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)))
                 .addContainerGap(80, Short.MAX_VALUE))
@@ -151,7 +151,7 @@ public class LexicoJframe extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ExpresionTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(59, 59, 59)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -189,7 +189,7 @@ public class LexicoJframe extends javax.swing.JFrame {
         // TODO add your handling code here:
         String Cadena;
         Main llamada =new Main();
-        Cadena = jTextField1.getText();
+        Cadena = ExpresionTF.getText();
          llamada.Main(Cadena);
         
         
@@ -239,7 +239,8 @@ public class LexicoJframe extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JTextField AnalisisTF;
     public static javax.swing.JTextField ErrorTF;
-    public javax.swing.JTextField SintacticoTF;
+    private javax.swing.JTextField ExpresionTF;
+    public static javax.swing.JTextField SintacticoTF;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -250,6 +251,5 @@ public class LexicoJframe extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
