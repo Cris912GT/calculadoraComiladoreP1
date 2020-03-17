@@ -237,7 +237,7 @@ public class Main {
             
             //       LANZA UN ERROR DEBIDO A QUE NO SE ADMITEN LETRAS
             if (esLetra(letraR)){
-                LexicoJframe.ErrorTF.setText("ERROR. El caracter en la pocicion " 
+                LexicoJframe.ErrorTP.setText("ERROR. El caracter en la pocicion " 
                                     + NoDeToken + " es una letra por lo que no se"
                                     + " puede realizar el procesamiento.");
                 /*System.out.println(ANSI_RED + "ERROR. El caracter en la pocicion "    
