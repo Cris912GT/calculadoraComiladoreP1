@@ -36,7 +36,7 @@ public class Main {
     static String texto;
     static String error = "                     --------------Error Léxico--------------";
     static int NoDeToken=1;
-    
+    static String nextToken="";
     
     public static void main(String [] Args) throws IOException{
         /*Creacion del archivo de texto a utilizar*/
@@ -442,6 +442,7 @@ public class Main {
     }
     
     public static void analisisSintactico(){
+        
         String token="";
         int lim = ColaTokens.contar()-1;
         System.out.println("limite: " + lim);
@@ -452,4 +453,13 @@ public class Main {
         token = "";
         }
     }
+    
+    public static String validar(String token){
+        tokenA = token;
+        
+        if (esNumero(tokenA)) {
+            
+        }
+    }
+
 }
