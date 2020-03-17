@@ -37,6 +37,7 @@ public class Main {
     static String error = "                     --------------Error Léxico--------------";
     static int NoDeToken=1;
     static String nextToken="";
+    static String nextVal = "";
     
     public static void main(String [] Args) throws IOException{
         /*Creacion del archivo de texto a utilizar*/
@@ -444,30 +445,127 @@ public class Main {
     public static void analisisSintactico(){
         
         String token="";
+        
         int lim = ColaTokens.contar()-1;
+        
         System.out.println("limite: " + lim);
+        
         for ( int k = 0; k <= lim; k++){
-        token = ColaTokens.extraer();
-            validar(token, NoDeToken);
-        token = "";
+            token = ColaTokens.extraer();
+            nextVal = validar(token, k);
+            token = "";
         }
     }
     
-    public static void validar(String token, int notoken){
+    public static String validar(String token, int notoken){
         String tokenA = token;
-        int no = notoken;
+        String tokenB ="";
+        String esp;
+        int nopos = notoken;
         
-        String[] listaDeTokens;
+        if (nopos == 0){
+            return "";
+        }
         
-        if (no == 0){}
-        
-        if (no == 1){
+        if (nopos == 1){
             if (esNumero(tokenA)) {
-                
+                esp = "+-*/^({[";
+                System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
+                return esp;
+            }
+            if (tokenA == "(") {
+                esp = "-({[@";
+                System.out.println("Valor reconocido: [" + tokenA + "] alor esperado: " + esp);
+                return esp;
+            }
+            if (tokenA == "{") {
+                return "-({[@";
+            }
+            if (tokenA == "[") {
+                return "-({[@";
+            }
+            if (tokenA == "-") {
+                return "@({[";
             }
         }
-        else {}
-        
+        else {
+            for (int i = 0; i < (nextVal.length()); i++){
+                char letra = nextVal.charAt(i);
+                tokenB = Character.toString(letra);
+                
+                //REGLAS APLICADAS A NUMEROS
+                if (tokenB == "@"){
+                    if (tokenA == tokenB){
+                        return "+-*/^#({[)}]";
+                    }
+                }
+                
+                // REGLAS APLICADAS A OPERADORES
+                if (tokenB == "+"){
+                    if (tokenA == tokenB){
+                        return "@({[";
+                    }
+                }
+                if (tokenB == "-"){
+                    if (tokenA == tokenB){
+                        return "@({[";
+                    }
+                }
+                if (tokenB == "*"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "/"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "^"){
+                    if (tokenA == tokenB){
+                        return "@({[";
+                    }
+                }
+                if (tokenB == "#"){
+                    if (tokenA == tokenB){
+                        return "@({[";
+                    }
+                }
+                
+                // REGLAS QUE SE APLICAN A LOS SIMBOLOS DE AGRUPACION
+                if (tokenB == "("){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "{"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "["){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == ")"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "}"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+                if (tokenB == "]"){
+                    if (tokenA == tokenB){
+                        return "@({[-";
+                    }
+                }
+            }
+        }
+        return "error";
     }
 
 }
