@@ -104,7 +104,9 @@ public class Main {
         String tokenLlaveAper = "{";
         String tokenLlaveClaus = "}";
         String tokenRaiz = "#";
+        String Raiz = "";
         String tokenPotencia = "^";
+        String Potencia = "";
         
         //Variables de prueba o de uso temporales
         //int numActual=0;
