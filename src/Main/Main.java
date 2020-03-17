@@ -520,17 +520,17 @@ public class Main {
                 tokenB = Character.toString(letra);
                 
                 //REGLAS APLICADAS A NUMEROS
-                if (tokenB == "@"){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("@")){
+                    if (tokenA.equals(tokenB)){
                         esp = " + - * / ^ # (  { [ ) } ] ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
-                        sintactic = sintactic + Temp;
+                        sintactic = si*(()()ntactic + Temp;
                         return esp;
                     }
                 }
                 
                 // REGLAS APLICADAS A OPERADORES
-                if (tokenB == "+"){
+                if (tokenB.equals("+")){
                     if (tokenA == tokenB){
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
@@ -538,34 +538,7 @@ public class Main {
                         return esp;
                     }
                 }
-                if (tokenB == "-"){
-                    if (tokenA == tokenB){
-                        esp = " @ ( { [ ";
-                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
-                        sintactic = sintactic + Temp;
-                        return esp;
-                        //return "@({[";
-                    }
-                }
-                if (tokenB == "*"){
-                    if (tokenA == tokenB){
-                        esp = " @ ( { [ - ";
-                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
-                        sintactic = sintactic + Temp;
-                        return esp;
-                        //return "@({[-";
-                    }
-                }
-                if (tokenB == "/"){
-                    if (tokenA == tokenB){
-                        esp = " @ ( { [ - ";
-                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
-                        sintactic = sintactic + Temp;
-                        return esp;
-                        //return "@({[-";
-                    }
-                }
-                if (tokenB == "^"){
+                if (tokenB.equals("-")){
                     if (tokenA == tokenB){
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
@@ -574,8 +547,35 @@ public class Main {
                         //return "@({[";
                     }
                 }
-                if (tokenB == "#"){
+                if (tokenB.equals("*")){
                     if (tokenA == tokenB){
+                        esp = " @ ( { [ - ";
+                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
+                    }
+                }
+                if (tokenB.equals("/")){
+                    if (tokenA == tokenB){
+                        esp = " @ ( { [ - ";
+                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[-";
+                    }
+                }
+                if (tokenB.equals("^")){
+                    if (tokenA.equals(tokenB)){
+                        esp = " @ ( { [ ";
+                        Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
+                        sintactic = sintactic + Temp;
+                        return esp;
+                        //return "@({[";
+                    }
+                }
+                if (tokenB.equals("#")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -585,8 +585,8 @@ public class Main {
                 }
                 
                 // REGLAS QUE SE APLICAN A LOS SIMBOLOS DE AGRUPACION
-                if (tokenB == "("){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("(")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -594,8 +594,8 @@ public class Main {
                         //return "@({[-";
                     }
                 }
-                if (tokenB == "{"){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("{")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -603,8 +603,8 @@ public class Main {
                         //return "@({[-";
                     }
                 }
-                if (tokenB == "["){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("[")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -612,8 +612,8 @@ public class Main {
                         //return "@({[-";
                     }
                 }
-                if (tokenB == ")"){
-                    if (tokenA == tokenB){
+                if (tokenB.equals(")")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -621,8 +621,8 @@ public class Main {
                         //return "@({[-";
                     }
                 }
-                if (tokenB == "}"){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("}")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -630,8 +630,8 @@ public class Main {
                         //return "@({[-";
                     }
                 }
-                if (tokenB == "]"){
-                    if (tokenA == tokenB){
+                if (tokenB.equals("]")){
+                    if (tokenA.equals(tokenB)){
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: [ " + tokenA + " ] valores esperado: " + esp);
                         sintactic = sintactic + Temp;
