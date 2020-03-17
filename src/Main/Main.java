@@ -34,6 +34,7 @@ public class Main {
     static Colas ColaTokens = new Colas();
     static String cadena1;
     static String texto;
+    static String error = "--------------Error Léxico--------------";
     static int NoDeToken=1;
     
     
@@ -237,9 +238,11 @@ public class Main {
             
             //       LANZA UN ERROR DEBIDO A QUE NO SE ADMITEN LETRAS
             if (esLetra(letraR)){
-                LexicoJframe.ErrorTP.setText("ERROR. El caracter en la pocicion " 
+                String ErrLetra =(" \n ERROR. El caracter en la pocicion " 
                                     + NoDeToken + " es una letra por lo que no se"
-                                    + " puede realizar el procesamiento.");
+                                    + " puede realizar el procesamiento. \n");
+                error = error + ErrLetra;
+                
                 /*System.out.println(ANSI_RED + "ERROR. El caracter en la pocicion "    
                                     + NoDeToken + " es una letra por lo que no se"
                                     + " puede realizar el procesamiento."+ ANSI_RESET);*/
@@ -256,6 +259,7 @@ public class Main {
             System.out.println("\n");
             
         }
+        LexicoJframe.ErrorTP.setText(error);
         LexicoJframe.LexicoTP.setText(texto);
         NoDeToken = 1;
         insertNumCola();
@@ -349,7 +353,9 @@ public class Main {
     public static void insertarEnColaTokens(String pretoken){
         String token = pretoken;
         ColaTokens.insertar(token);
-        System.out.println("Los tokens almacenados en cola son: " + ColaTokens.toString());
+        String Prueba = ("Los tokens almacenados en cola son: " + ColaTokens.toString());
+        texto = texto + Prueba;
+        //System.out.println("Los tokens almacenados en cola son: " + ColaTokens.toString());
     }
     
     public static void acumularNumero(String token){
@@ -396,7 +402,8 @@ public class Main {
             return "sM";
         }
         else {
-            System.out.println(ANSI_RED + " ERROR: El primer caracter de la operacion no es valido....");
+            LexicoJframe.ErrorTP.setText("-------------Error Léxico-------------" + "ERROR: El primer caracter de la operacion no es valido....");
+            //System.out.println(ANSI_RED + " ERROR: El primer caracter de la operacion no es valido....");
             
             return "er";
         }
