@@ -456,7 +456,7 @@ public class Main {
     
     public static void validar(String token){
         String tokenA = token;
-        
+        String[] listaDeTokens;
         if (esNumero(tokenA)) {
             
         }
