@@ -100,11 +100,17 @@ public class Main {
         String tokenDivision = "/";
         String Division="";
         String tokenParentesisAper = "(";
+        String PAper = "";
         String tokenParentesisClaus = ")";
+        String PClaus = "";
         String tokenCorcheteAper = "[";
+        String CAper = "";
         String tokenCorhceteClaus = "]";
+        String CClaus = "";
         String tokenLlaveAper = "{";
+        String LLAper = "";
         String tokenLlaveClaus = "}";
+        String LLClaus = "";
         String tokenRaiz = "#";
         String Raiz = "";
         String tokenPotencia = "^";
@@ -120,7 +126,7 @@ public class Main {
             //          INSERTAR OPERADORES MATEMATICOS A LA COLA
             if (PreToken.equals(tokenSuma)) {
                 insertNumCola();
-                Suma="\n El token reconocido es:  +  \n";
+                Suma="\n El token reconocido es:  +  ";
                 texto = texto + Suma;
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
@@ -128,7 +134,7 @@ public class Main {
                 PreToken = "";
             }
             if (PreToken.equals(tokenResta)) {
-                Resta="\n El token reconocido es:  - \n";
+                Resta="\n El token reconocido es:  - ";
                 texto = texto + Suma;
                 insertNumCola();
                 //System.out.println("El token reconocido es: " + PreToken);
@@ -138,7 +144,7 @@ public class Main {
             }
             if (PreToken.equals(tokenMultiplicacion)) {
                 insertNumCola();
-                Multiplicacion=" \n El token reconocido es:  * \n";
+                Multiplicacion=" \n El token reconocido es:  * ";
                 texto = texto + Multiplicacion;
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
@@ -147,7 +153,7 @@ public class Main {
             }
             if (PreToken.equals(tokenDivision)) {
                 insertNumCola();
-                Suma="\n El token reconocido es:  /  \n";
+                Suma="\n El token reconocido es:  /  ";
                 //System.out.println("El token reconocido es: " + PreToken);
                 insertarACP1(PreToken);
                 insertarEnColaTokens(PreToken);
@@ -240,7 +246,7 @@ public class Main {
             if (esLetra(letraR)){
                 String ErrLetra =(" \n ERROR. El caracter en la pocicion " 
                                     + NoDeToken + " es una letra por lo que no se"
-                                    + " puede realizar el procesamiento. \n");
+                                    + " puede realizar el procesamiento. ");
                 error = error + ErrLetra;
                 
                 /*System.out.println(ANSI_RED + "ERROR. El caracter en la pocicion "    
@@ -353,7 +359,7 @@ public class Main {
     public static void insertarEnColaTokens(String pretoken){
         String token = pretoken;
         ColaTokens.insertar(token);
-        String Prueba = ("Los tokens almacenados en cola son: " + ColaTokens.toString());
+        String Prueba = ("\n Los tokens almacenados en cola son: " + token);
         texto = texto + Prueba;
         //System.out.println("Los tokens almacenados en cola son: " + ColaTokens.toString());
     }
