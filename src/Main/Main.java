@@ -454,8 +454,8 @@ public class Main {
         }
     }
     
-    public static String validar(String token){
-        tokenA = token;
+    public static void validar(String token){
+        String tokenA = token;
         
         if (esNumero(tokenA)) {
             
