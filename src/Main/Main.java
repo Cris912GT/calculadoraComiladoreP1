@@ -493,6 +493,9 @@ public class Main {
                 System.out.println("Valor reconocido: [" + tokenA + "] valores esperado: " + esp);
                 return esp;
             }
+            else {
+                System.out.println(ANSI_RED + "ERROR el token "+tokenA+" en la pocicion "+ nopos +" es invalido en la estructura." + ANSI_RESET);
+            }
         }
         else {
             for (int i = 0; i < (nextVal.length()); i++){
