@@ -53,6 +53,8 @@ public class Main {
             f.delete();
             f.createNewFile();
         }
+        
+        /*ESTILO NIMBUS PARA LA INTERFAZ GRAFICA*/
          for(UIManager.LookAndFeelInfo laf:UIManager.getInstalledLookAndFeels()){
             if("Nimbus".equals(laf.getName()))
                 try {
@@ -60,9 +62,11 @@ public class Main {
             } catch (Exception ex) {
             }
         }
-         LexicoJframe ejecucion =new LexicoJframe();
          
-       
+         
+         /*OBJETO DEL JFRAME CREADO*/
+         LexicoJframe ejecucion =new LexicoJframe();
+        /*LLAMADO AL JFRAME PARA SU EJECUCION*/
         ejecucion.setVisible(true);
         
        /* ColaTokens.insertar(" ");
@@ -74,7 +78,8 @@ public class Main {
         System.out.println("\n\n\n");
         //primercaracter();
     }
-    
+      /*INICIO DEL PROGRAMA RECIBE LA CADENA DE TEXTO DESPUES DE PRECIONAR EL BOTON Y ENVIA EL PARAMETRO
+       A LOS DISTINTOS METODOS INICIALES*/
      public static void Main(String Cadena) {/*Recibo la cadena de la caja de texto*/
         ColaTokens.insertar(" ");
         cadena1 = Cadena;
@@ -84,7 +89,10 @@ public class Main {
         }
     
     
-    /*Metodo utilizado para realizar la validacion de tokens y eliminar espacios en la cadena*/
+    /*Metodo utilizado para realizar la validacion de tokens y eliminar espacios en la cadena
+      AQUI SE DECLARA LA TABLA DE SIMBOLOS A RECONOCER POR EL ANALIZADOR LEXICO Y MEDIANTE UN CICLO Y SENTENCIAS IF
+     SE VA RECONOCIENDO TOKEN POR TOKEN Y POSTERIORMENTE SE AGREGA A LA COLA, EN ESTE METODO SE ENVIA
+     AL TEXTAREA DE LA INTERFAZ GRAFICA CADA LINEA QUE VA RECONOCIENDO*/
     private static void SeparacionTokens(String cadena1){
         // Declaracion de la cantidad de tokens analizados
         
@@ -375,7 +383,7 @@ public class Main {
         System.out.println("Cantidad de corchetes: " + NoDeCorchetes);
         System.out.println("Cantidad de llaves: " + NoDeLlaves);
     }
-    
+    /*METODO QUE RECIBE PRETOKENS Y LO INCLUYE DENTRO DE LA PILA*/
     public static void insertarEnColaTokens(String pretoken){
         String token = pretoken;
         ColaTokens.insertar(token);
