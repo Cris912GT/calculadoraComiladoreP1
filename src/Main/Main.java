@@ -33,7 +33,7 @@ public class Main {
     static String num =  "";
     static Colas ColaTokens = new Colas();
     static String cadena1;
-    static String texto;
+    static String texto = "";
     static String error = "\n                           --------------Error Léxico--------------";
     static String errors = "\n \n                       --------------Error Sintactico--------------";
     static String sintactic= "";
