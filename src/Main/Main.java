@@ -459,6 +459,10 @@ public class Main {
             nextVal = validar(token, k);
             token = "";
         }
+        System.out.println("\n Variable sintatica"+ sintactic);
+        LexicoJframe.SintacticoTP.setText(sintactic);
+        concerr = error + errors;
+        LexicoJframe.ErrorTP.setText(concerr);
     }
     
     public static String validar(String token, int notoken){
@@ -518,10 +522,11 @@ public class Main {
             for (int i = 0; i < (nextVal.length()); i++){
                 char letra = nextVal.charAt(i);
                 tokenB = Character.toString(letra);
-                
+                System.out.println(tokenB+"  " +tokenA);
                 //REGLAS APLICADAS A NUMEROS
                 if (tokenB.equals("@")){
-                    if (tokenA.equals(tokenB)){
+                    System.out.println("verifiacion num");
+                    if (esNumero(tokenA)){
                         esp = " + - * / ^ # (  { [ ) } ] ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -532,6 +537,7 @@ public class Main {
                 // REGLAS APLICADAS A OPERADORES
                 if (tokenB.equals("+")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion +");
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -540,6 +546,7 @@ public class Main {
                 }
                 if (tokenB.equals("-")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion -");
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -549,6 +556,7 @@ public class Main {
                 }
                 if (tokenB.equals("*")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion *");
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -558,6 +566,7 @@ public class Main {
                 }
                 if (tokenB.equals("/")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion /");
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -567,6 +576,7 @@ public class Main {
                 }
                 if (tokenB.equals("^")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion ^");
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -576,6 +586,7 @@ public class Main {
                 }
                 if (tokenB.equals("#")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion #");
                         esp = " @ ( { [ ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -587,6 +598,7 @@ public class Main {
                 // REGLAS QUE SE APLICAN A LOS SIMBOLOS DE AGRUPACION
                 if (tokenB.equals("(")){
                     if (tokenA.equals(tokenB)){
+                        System.out.println("verifiacion ");
                         esp = " @ ( { [ - ";
                         Temp = ("\n Valor reconocido: " + tokenA + " valores esperado: " + esp);
                         sintactic = sintactic + Temp;
@@ -641,9 +653,7 @@ public class Main {
                 }
             }
         }
-        LexicoJframe.SintacticoTP.setText(sintactic);
-        concerr = error + errors;
-        LexicoJframe.ErrorTP.setText(concerr);
+        
         return "error";
     }
     
