@@ -59,6 +59,7 @@ public class LexicoJframe extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        gif = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         ExpresionTF = new javax.swing.JTextField();
@@ -130,40 +131,46 @@ public class LexicoJframe extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Rony Andree Baran Mata             4490-17-3323");
 
+        gif.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/corona.gif"))); // NOI18N
+
         javax.swing.GroupLayout PanelNegroLayout = new javax.swing.GroupLayout(PanelNegro);
         PanelNegro.setLayout(PanelNegroLayout);
         PanelNegroLayout.setHorizontalGroup(
             PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelNegroLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNegroLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel7)))
                     .addGroup(PanelNegroLayout.createSequentialGroup()
                         .addGroup(PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6)
                             .addGroup(PanelNegroLayout.createSequentialGroup()
-                                .addGap(14, 14, 14)
-                                .addComponent(LOGOUMG)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(26, 26, 26)
+                                .addGroup(PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel7)
+                                    .addComponent(LOGOUMG)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel5)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNegroLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(gif)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNegroLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel6)))
                 .addContainerGap())
         );
         PanelNegroLayout.setVerticalGroup(
             PanelNegroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelNegroLayout.createSequentialGroup()
-                .addContainerGap(343, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(gif)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
-                .addGap(45, 45, 45)
+                .addGap(50, 50, 50)
                 .addComponent(LOGOUMG)
                 .addGap(34, 34, 34))
         );
@@ -309,6 +316,7 @@ public class LexicoJframe extends javax.swing.JFrame {
     private javax.swing.JPanel PanelBlanco;
     private javax.swing.JPanel PanelNegro;
     public static javax.swing.JTextPane SintacticoTP;
+    private javax.swing.JLabel gif;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
